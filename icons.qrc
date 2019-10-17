@@ -1,0 +1,119 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Icons/All Users Folder.ico</file>
+        <file>Icons/Apps.ico</file>
+        <file>Icons/Attributes.ico</file>
+        <file>Icons/Back.ico</file>
+        <file>Icons/Certificate.ico</file>
+        <file>Icons/Cmd.ico</file>
+        <file>Icons/Cmd2.ico</file>
+        <file>Icons/Control Panel.ico</file>
+        <file>Icons/Copy To.ico</file>
+        <file>Icons/Copy To2.ico</file>
+        <file>Icons/Copy To3.ico</file>
+        <file>Icons/Copy.ico</file>
+        <file>Icons/Copy2.ico</file>
+        <file>Icons/CopyPath.ico</file>
+        <file>Icons/Cut.ico</file>
+        <file>Icons/Delete.ico</file>
+        <file>Icons/DeleteHistory.ico</file>
+        <file>Icons/DeleteShift.ico</file>
+        <file>Icons/Desktop.ico</file>
+        <file>Icons/Disconnect.ico</file>
+        <file>Icons/DisplayOff.ico</file>
+        <file>Icons/Documents.ico</file>
+        <file>Icons/E-mail1.ico</file>
+        <file>Icons/E-mail2.ico</file>
+        <file>Icons/E-mail3.ico</file>
+        <file>Icons/Encrypt.ico</file>
+        <file>Icons/Favorites.ico</file>
+        <file>Icons/Favorites2.ico</file>
+        <file>Icons/Folder Options.ico</file>
+        <file>Icons/Forward.ico</file>
+        <file>Icons/Google.ico</file>
+        <file>Icons/GroupBy.ico</file>
+        <file>Icons/Help.ico</file>
+        <file>Icons/Hibernate.ico</file>
+        <file>Icons/Home.ico</file>
+        <file>Icons/Libraries.ico</file>
+        <file>Icons/Lock.ico</file>
+        <file>Icons/Logoff.ico</file>
+        <file>Icons/Logoff2.ico</file>
+        <file>Icons/Move To.ico</file>
+        <file>Icons/Move To2.ico</file>
+        <file>Icons/Move To3.ico</file>
+        <file>Icons/MoveTo4.ico</file>
+        <file>Icons/Music.ico</file>
+        <file>Icons/Network.ico</file>
+        <file>Icons/New folder.ico</file>
+        <file>Icons/Outlook Find.ico</file>
+        <file>Icons/Paste 2.ico</file>
+        <file>Icons/Paste.ico</file>
+        <file>Icons/PasteLink.ico</file>
+        <file>Icons/Pictures.ico</file>
+        <file>Icons/Pin.ico</file>
+        <file>Icons/Pinned Documents.ico</file>
+        <file>Icons/PlayAll.ico</file>
+        <file>Icons/PlaySelection.ico</file>
+        <file>Icons/PowerShell.ico</file>
+        <file>Icons/PowerShellAdmin.ico</file>
+        <file>Icons/Printers.ico</file>
+        <file>Icons/Recycle Bin.ico</file>
+        <file>Icons/Redo (Blue).ico</file>
+        <file>Icons/Redo.ico</file>
+        <file>Icons/Redo2.ico</file>
+        <file>Icons/Refresh.ico</file>
+        <file>Icons/Restart.ico</file>
+        <file>Icons/Rotate1.ico</file>
+        <file>Icons/Rotate2.ico</file>
+        <file>Icons/RunAs.ico</file>
+        <file>Icons/Search.ico</file>
+        <file>Icons/Search2.ico</file>
+        <file>Icons/Search3.ico</file>
+        <file>Icons/Search4.ico</file>
+        <file>Icons/Search5.ico</file>
+        <file>Icons/Search6.ico</file>
+        <file>Icons/Search7.ico</file>
+        <file>Icons/Select.ico</file>
+        <file>Icons/Select2.ico</file>
+        <file>Icons/SelectAll.ico</file>
+        <file>Icons/SelectInvert.ico</file>
+        <file>Icons/SelectNone.ico</file>
+        <file>Icons/Set as wallpaper.ico</file>
+        <file>Icons/Share.ico</file>
+        <file>Icons/Share2.ico</file>
+        <file>Icons/Shared.ico</file>
+        <file>Icons/Shortcut.ico</file>
+        <file>Icons/Shutdown.ico</file>
+        <file>Icons/Shutdown2.ico</file>
+        <file>Icons/SizeAll.ico</file>
+        <file>Icons/Sleep.ico</file>
+        <file>Icons/Slideshow.ico</file>
+        <file>Icons/Sort Ascending.ico</file>
+        <file>Icons/Sort Descending.ico</file>
+        <file>Icons/Stack By.ico</file>
+        <file>Icons/Terminal.ico</file>
+        <file>Icons/UAC.ico</file>
+        <file>Icons/Undo.ico</file>
+        <file>Icons/Undo2.ico</file>
+        <file>Icons/Undock.ico</file>
+        <file>Icons/Unshare.ico</file>
+        <file>Icons/Unshare2.ico</file>
+        <file>Icons/Up.ico</file>
+        <file>Icons/Videos.ico</file>
+        <file>Icons/View.ico</file>
+        <file>Icons/ViewContent.ico</file>
+        <file>Icons/ViewDetails.ico</file>
+        <file>Icons/ViewExtraLarge.ico</file>
+        <file>Icons/ViewLarge.ico</file>
+        <file>Icons/ViewList.ico</file>
+        <file>Icons/ViewMedium.ico</file>
+        <file>Icons/ViewSmall.ico</file>
+        <file>Icons/ViewTiles.ico</file>
+        <file>Icons/Wikipedia.ico</file>
+        <file>Icons/Windows Virtual PC.ico</file>
+        <file>Icons/WLPG1.ico</file>
+        <file>Icons/WLPG2.ico</file>
+        <file>Icons/WLPG3.ico</file>
+    </qresource>
+</RCC>
