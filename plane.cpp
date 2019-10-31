@@ -33,3 +33,23 @@ void Plane::clear(){
     }
 
 }
+
+bool Plane::isConvex(){
+
+    QVector3D u, v;
+    float angle;
+
+    for (int i = 1; i < this->numPoints - 1; i++) {
+        u = this->planePoints[i-1].vectorCreation(this->planePoints[i]);
+        v = this->planePoints[i+1].vectorCreation(this->planePoints[i]);
+
+        angle = Vector::angleBetweenVectors(u, v);
+
+        if(angle > 180){
+            return false;
+        }
+    }
+
+    return true;
+
+}

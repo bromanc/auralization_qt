@@ -41,3 +41,16 @@ bool Vector::compareVectors(const QVector3D &vector1,
   return (vector1.x() == vector2.x()) && (vector1.y() == vector2.y()) &&
          (vector1.z() == vector2.z());
 }
+
+float Vector::angleBetweenVectors(QVector3D vecA, QVector3D vecB){
+
+    float aux = QVector3D::dotProduct(vecA, vecB);
+
+    aux /= sqrt(QVector3D::dotProduct(vecA, vecA));
+    aux /= sqrt(QVector3D::dotProduct(vecB, vecB));
+
+    float angle = acos(aux) / M_PI * 180;
+
+    return angle;
+
+}

@@ -4,6 +4,7 @@
 #include <definitions.h>
 #include <point.h>
 #include <triangle.h>
+#include <vector.h>
 
 class Plane
 {

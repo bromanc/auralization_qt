@@ -11,6 +11,7 @@ public:
                                          QVector3D vB);
   static bool compareVectors(const QVector3D &vector1,
                              const QVector3D &vector2);
+  static float angleBetweenVectors(QVector3D vecA, QVector3D vecB);
 };
 
 #endif // VECTOR_H
