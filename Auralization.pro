@@ -30,7 +30,16 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    plane.cpp \
+    planelayer.cpp \
+    point.cpp \
     ray.cpp \
+    receiver.cpp \
+    receiverlayer.cpp \
+    reflector.cpp \
+    room.cpp \
+    source.cpp \
+    sourcelayer.cpp \
     triangle.cpp \
     sphere.cpp \
     vector.cpp \
@@ -41,8 +50,18 @@ SOURCES += \
     glwidget.cpp
 
 HEADERS += \
+    definitions.h \
     mainwindow.h \
+    plane.h \
+    planelayer.h \
+    point.h \
     ray.h \
+    receiver.h \
+    receiverlayer.h \
+    reflector.h \
+    room.h \
+    source.h \
+    sourcelayer.h \
     triangle.h \
     sphere.h \
     intersectioninfo.h \
