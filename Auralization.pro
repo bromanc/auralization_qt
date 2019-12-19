@@ -28,8 +28,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    audience.cpp \
     main.cpp \
     mainwindow.cpp \
+    material.cpp \
     plane.cpp \
     planelayer.cpp \
     point.cpp \
@@ -47,11 +49,14 @@ SOURCES += \
     ofxConvexHull/libs/Tests/QuickHullTests.cpp \
     ofxConvexHull/libs/QuickHull.cpp \
     ofxConvexHull/src/ofxConvexHull.cpp \
-    glwidget.cpp
+    glwidget.cpp \
+    plane.cpp
 
 HEADERS += \
+    audience.h \
     definitions.h \
     mainwindow.h \
+    material.h \
     plane.h \
     planelayer.h \
     point.h \
@@ -83,7 +88,8 @@ HEADERS += \
     glwidget.h \
     raytracer.h \
     impulseresponse.h \
-    bandenergy.h
+    bandenergy.h\
+    plane.h
 
 FORMS += \
         mainwindow.ui
