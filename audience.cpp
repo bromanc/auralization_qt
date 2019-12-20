@@ -37,16 +37,16 @@ void Audience::calculateBase(){
 void Audience::clear(){
 
     this->name[0] = 'A';
-    this->name[0] = 'u';
-    this->name[0] = 'd';
-    this->name[0] = 'i';
-    this->name[0] = 'e';
-    this->name[0] = 'n';
-    this->name[0] = 'c';
-    this->name[0] = 'e';
-    this->name[0] = ' ';
-    this->name[0] = '#';
-    this->name[0] = NULL;
+    this->name[1] = 'u';
+    this->name[2] = 'd';
+    this->name[3] = 'i';
+    this->name[4] = 'e';
+    this->name[5] = 'n';
+    this->name[6] = 'c';
+    this->name[7] = 'e';
+    this->name[8] = ' ';
+    this->name[9] = '#';
+    this->name[10] = NULL;
 
     this->radius = 0.15;
     this->target.matchValue(0.0f);

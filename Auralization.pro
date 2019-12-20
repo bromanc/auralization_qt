@@ -29,6 +29,7 @@ CONFIG += c++11
 
 SOURCES += \
     audience.cpp \
+    directivity.cpp \
     main.cpp \
     mainwindow.cpp \
     material.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
     receiver.cpp \
     receiverlayer.cpp \
     reflector.cpp \
+    results.cpp \
     room.cpp \
     source.cpp \
     sourcelayer.cpp \
@@ -50,11 +52,11 @@ SOURCES += \
     ofxConvexHull/libs/QuickHull.cpp \
     ofxConvexHull/src/ofxConvexHull.cpp \
     glwidget.cpp \
-    plane.cpp
 
 HEADERS += \
     audience.h \
     definitions.h \
+    directivity.h \
     mainwindow.h \
     material.h \
     plane.h \
@@ -64,6 +66,7 @@ HEADERS += \
     receiver.h \
     receiverlayer.h \
     reflector.h \
+    results.h \
     room.h \
     source.h \
     sourcelayer.h \
