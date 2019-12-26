@@ -1,9 +1,6 @@
 #include "plane.h"
 
-Plane::Plane()
-{
-
-}
+Plane::Plane() {}
 
 Plane::~Plane() {}
 
@@ -31,11 +28,9 @@ void Plane::clear(){
     for (int k = 0; k < MaxNPoints - 2; k++) {
         this->planeTriangles[k] = *new Triangle();
     }
-
 }
 
 bool Plane::isConvex(){
-
     QVector3D u, v;
     float angle;
 
@@ -51,5 +46,4 @@ bool Plane::isConvex(){
     }
 
     return true;
-
 }

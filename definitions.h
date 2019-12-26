@@ -3,6 +3,8 @@
 
 #define None -1
 #define NumberBands 6
+#define NumberBands2 9
+#define MaxNAngles 13
 #define MaxNChar 50
 #define MaxNPoints 200
 #define MaxNSelectedPlanes 2000
