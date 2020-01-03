@@ -33,9 +33,11 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     material.cpp \
+    materialdatabase.cpp \
     plane.cpp \
     planelayer.cpp \
     point.cpp \
+    qltyacousparam.cpp \
     ray.cpp \
     receiver.cpp \
     receiverlayer.cpp \
@@ -59,9 +61,11 @@ HEADERS += \
     directivity.h \
     mainwindow.h \
     material.h \
+    materialdatabase.h \
     plane.h \
     planelayer.h \
     point.h \
+    qltyacousparam.h \
     ray.h \
     receiver.h \
     receiverlayer.h \
