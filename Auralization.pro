@@ -28,9 +28,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    audience.cpp \
+    directivity.cpp \
     main.cpp \
     mainwindow.cpp \
+    material.cpp \
+    materialdatabase.cpp \
+    plane.cpp \
+    planelayer.cpp \
+    point.cpp \
+    qltyacousparam.cpp \
     ray.cpp \
+    receiver.cpp \
+    receiverlayer.cpp \
+    reflector.cpp \
+    results.cpp \
+    room.cpp \
+    source.cpp \
+    sourcelayer.cpp \
     triangle.cpp \
     sphere.cpp \
     vector.cpp \
@@ -38,11 +53,27 @@ SOURCES += \
     ofxConvexHull/libs/Tests/QuickHullTests.cpp \
     ofxConvexHull/libs/QuickHull.cpp \
     ofxConvexHull/src/ofxConvexHull.cpp \
-    glwidget.cpp
+    glwidget.cpp \
 
 HEADERS += \
+    audience.h \
+    definitions.h \
+    directivity.h \
     mainwindow.h \
+    material.h \
+    materialdatabase.h \
+    plane.h \
+    planelayer.h \
+    point.h \
+    qltyacousparam.h \
     ray.h \
+    receiver.h \
+    receiverlayer.h \
+    reflector.h \
+    results.h \
+    room.h \
+    source.h \
+    sourcelayer.h \
     triangle.h \
     sphere.h \
     intersectioninfo.h \
@@ -64,7 +95,8 @@ HEADERS += \
     glwidget.h \
     raytracer.h \
     impulseresponse.h \
-    bandenergy.h
+    bandenergy.h\
+    plane.h
 
 FORMS += \
         mainwindow.ui
