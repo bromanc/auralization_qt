@@ -761,6 +761,11 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionOrbit"/>
+   <addaction name="actionTranslate"/>
+   <addaction name="actionZoom"/>
+   <addaction name="actionPerspective"/>
+   <addaction name="separator"/>
    <addaction name="actionPlay"/>
   </widget>
   <action name="actionopen">
@@ -795,13 +800,67 @@
     <string>Start simulation</string>
    </property>
   </action>
+  <action name="actionOrbit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/OrbitView.ico</normaloff>:/icons/Icons/OrbitView.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Orbit</string>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="actionTranslate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/TranslateView.ico</normaloff>:/icons/Icons/TranslateView.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Translate</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/Search.ico</normaloff>:/icons/Icons/Search.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom</string>
+   </property>
+  </action>
+  <action name="actionPerspective">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/perspective.ico</normaloff>:/icons/Icons/perspective.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Perspective</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>GlWidget</class>
    <extends>QOpenGLWidget</extends>
-   <header location="global">glwidget.h</header>
+   <header>glwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

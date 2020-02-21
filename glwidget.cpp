@@ -7,9 +7,18 @@ GlWidget::GlWidget(QWidget *parent) : QOpenGLWidget(parent) {
   m_gridElements = 40;
   m_horizontalViewerAngle = 19 * M_PI / 60;
   m_verticalViewerAngle = 13 * M_PI / 60;
+  viewMode = 1;
 }
 
 GlWidget::~GlWidget() {}
+
+int GlWidget::getViewMode(){
+    return this->viewMode;
+}
+
+void GlWidget::setViewMode(int mode){
+    this->viewMode = mode;
+}
 
 static void qNormalizeAngle(int &angle) {
   while (angle < 0)
@@ -154,19 +163,21 @@ void GlWidget::mouseMoveEvent(QMouseEvent *event) {
   int dx = event->x() - m_lastPos.x();
   int dy = event->y() - m_lastPos.y();
 
-  if (dx < 0)
-    m_horizontalViewerAngle += v * M_PI / 60;
-  if (dx > 0)
-    m_horizontalViewerAngle -= v * M_PI / 60;
-  if (dy > 0) {
-    m_verticalViewerAngle += v * M_PI / 60;
-    if (m_verticalViewerAngle < -M_PI / 2)
-      m_verticalViewerAngle = -M_PI / 2;
-  }
-  if (dy < 0) {
-    m_verticalViewerAngle -= v * M_PI / 60;
-    if (m_verticalViewerAngle > M_PI / 2)
-      m_verticalViewerAngle = M_PI / 2;
+  switch (this->getViewMode()) {
+  case 1:
+      this->orbitMode(dx, dy, v);
+      break;
+  case 2:
+      this->translateMode(dx, dy, v);
+      break;
+  case 3:
+      this->zoomMode(dy, v);
+      break;
+  case 4:
+      this->perspectiveMode(dy, v);
+      break;
+  default:
+      break;
   }
 
   update();
@@ -187,4 +198,83 @@ void GlWidget::wheelEvent(QWheelEvent *event) {
                             qTan(m_focusAngle / (v * 2));
   }
   update();
+}
+
+void GlWidget::orbitMode(int dx, int dy, double v){
+
+    if (dx < 0)
+      m_horizontalViewerAngle += v * M_PI / 60;
+    if (dx > 0)
+      m_horizontalViewerAngle -= v * M_PI / 60;
+    if (dy > 0) {
+      m_verticalViewerAngle += v * M_PI / 60;
+      if (m_verticalViewerAngle < -M_PI / 2)
+        m_verticalViewerAngle = -M_PI / 2;
+    }
+    if (dy < 0) {
+      m_verticalViewerAngle -= v * M_PI / 60;
+      if (m_verticalViewerAngle > M_PI / 2)
+        m_verticalViewerAngle = M_PI / 2;
+    }
+
+}
+
+void GlWidget::translateMode(int dx, int dy, double v){
+
+    QVector3D *up = new QVector3D (0.0f, 0.0f, 1.0f);
+    QVector3D base0 = QVector3D::normal(*up, this->m_observerPoint.operator-=(this->m_centerPoint));
+    QVector3D base1 = QVector3D::normal(this->m_observerPoint.operator-=(this->m_centerPoint), base0);
+
+    if(dx < 0){
+        this->m_centerPoint.operator+=(base0.operator*=((v * m_gridSpace)));
+        this->m_observerPoint.operator+=(base0.operator*=((v * m_gridSpace)));
+    }
+
+    if(dx > 0){
+        this->m_centerPoint.operator+=(base0.operator*=((v * -m_gridSpace)));
+        this->m_observerPoint.operator+=(base0.operator*=((v * -m_gridSpace)));
+    }
+
+    if(dy > 0){
+        this->m_centerPoint.operator+=(base1.operator*=((v * m_gridSpace)));
+        this->m_observerPoint.operator+=(base1.operator*=((v * m_gridSpace)));
+    }
+
+    if(dy < 0){
+        this->m_centerPoint.operator+=(base1.operator*=((v * -m_gridSpace)));
+        this->m_observerPoint.operator+=(base1.operator*=((v * -m_gridSpace)));
+    }
+
+}
+
+void GlWidget::zoomMode(int dy, double v){
+
+    if(dy < 0){
+        if(m_observerDistance > (m_gridSpace * 2 * v)){
+            m_observerDistance -= v * 2 * m_gridSpace * (qTan(0.5/(v * 2))/qTan(m_focusAngle/(v * 2)));
+        }
+    }
+
+    if(dy > 0){
+        if(m_observerDistance < (m_gridSpace * 2 * v * 100)){
+            m_observerDistance += v * 2 * m_gridSpace * (qTan(0.5/(v * 2))/qTan(m_focusAngle/(v * 2)));
+        }
+    }
+
+}
+
+void GlWidget::perspectiveMode(int dy, double v){
+
+    if(dy < 0){
+        if(m_focusAngle < (M_PI - (v * 0.06))){
+            m_focusAngle += v * 0.05;
+            m_observerDistance = m_observerDistance * (qTan((m_focusAngle - (v * 0.05))/ 2)/qTan(m_focusAngle / 2));
+        }
+    }
+    if(dy > 0){
+        if(m_focusAngle > v * 0.06){
+            m_focusAngle -= v * 0.05;
+            m_observerDistance = m_observerDistance * (qTan((m_focusAngle + (v * 0.05))/ 2)/qTan(m_focusAngle / 2));
+        }
+    }
 }

@@ -21,7 +21,9 @@ class GlWidget : public QOpenGLWidget, protected QOpenGLFunctions_2_0 {
 
 public:
   GlWidget(QWidget *parent = 0);
-  ~GlWidget();
+  ~GlWidget() override;
+  int getViewMode();
+  void setViewMode(int);
 
 protected:
   void initializeGL() override;
@@ -34,6 +36,7 @@ protected:
 private:
   int m_xRot;
   int m_yRot;
+  int viewMode;
 
   QPoint m_lastPos;
   QVector3D m_centerPoint;
@@ -48,6 +51,11 @@ private:
 
   void drawGrid();
   void drawAxis();
+  void orbitMode(int, int, double);
+  void translateMode(int, int, double);
+  void zoomMode(int, double);
+  void perspectiveMode(int, double);
+
 };
 
 #endif // GLWIDGET_H
