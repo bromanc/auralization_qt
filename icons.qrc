@@ -115,5 +115,8 @@
         <file>Icons/WLPG1.ico</file>
         <file>Icons/WLPG2.ico</file>
         <file>Icons/WLPG3.ico</file>
+        <file>Icons/OrbitView.ico</file>
+        <file>Icons/TranslateView.ico</file>
+        <file>Icons/perspective.ico</file>
     </qresource>
 </RCC>
