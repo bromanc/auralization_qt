@@ -11,7 +11,12 @@ MainWindow::~MainWindow() { delete ui; }
 
 void MainWindow::on_actionexit_triggered()
 {
-    QApplication::exit();
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Test", "Quit?",
+                                QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        QApplication::quit();
+    }
 }
 
 void MainWindow::on_actionPlay_triggered()
@@ -31,6 +36,9 @@ void MainWindow::groupActions(){
     actions->addAction(this->ui->actionOrbit);
     actions->addAction(this->ui->actionPerspective);
     actions->addAction(this->ui->actionTranslate);
+    actions->addAction(this->ui->actionSpacing);
+    actions->addAction(this->ui->actionSize);
+    actions->addAction(this->ui->actionMove_Center_View);
 
 }
 

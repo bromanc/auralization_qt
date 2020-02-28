@@ -118,5 +118,9 @@
         <file>Icons/OrbitView.ico</file>
         <file>Icons/TranslateView.ico</file>
         <file>Icons/perspective.ico</file>
+        <file>Icons/SpacingGrid.ico</file>
+        <file>Icons/SizeGrid.ico</file>
+        <file>Icons/CenterGrid.ico</file>
+        <file>Icons/HideGrid.ico</file>
     </qresource>
 </RCC>

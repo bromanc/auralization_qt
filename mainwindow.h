@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QActionGroup>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;

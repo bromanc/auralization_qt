@@ -766,6 +766,11 @@
    <addaction name="actionZoom"/>
    <addaction name="actionPerspective"/>
    <addaction name="separator"/>
+   <addaction name="actionSize"/>
+   <addaction name="actionSpacing"/>
+   <addaction name="actionMove_Center_View"/>
+   <addaction name="actionHide_Grid"/>
+   <addaction name="separator"/>
    <addaction name="actionPlay"/>
   </widget>
   <action name="actionopen">
@@ -852,6 +857,54 @@
    </property>
    <property name="text">
     <string>Perspective</string>
+   </property>
+  </action>
+  <action name="actionSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/SizeGrid.ico</normaloff>:/icons/Icons/SizeGrid.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Size</string>
+   </property>
+  </action>
+  <action name="actionSpacing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/SpacingGrid.ico</normaloff>:/icons/Icons/SpacingGrid.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Spacing</string>
+   </property>
+  </action>
+  <action name="actionMove_Center_View">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/CenterGrid.ico</normaloff>:/icons/Icons/CenterGrid.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Move Center View</string>
+   </property>
+  </action>
+  <action name="actionHide_Grid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Icons/HideGrid.ico</normaloff>:/icons/Icons/HideGrid.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Hide Grid</string>
    </property>
   </action>
  </widget>
